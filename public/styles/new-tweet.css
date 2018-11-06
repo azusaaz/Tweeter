@@ -42,3 +42,63 @@
 .counter.error {
   color: red;
 }
+
+
+article.tweet{
+
+  border: solid 1px #ddd;
+  border-radius: 0.4rem;
+  margin: 2rem;
+ 
+}
+
+article.tweet header{
+  background-color: #eee;
+  height: 4.2rem;
+  color: #244751;
+  padding: 0.7rem;
+}
+
+article.tweet * {
+  font-weight: 300;
+}
+
+article.tweet header .img-container{
+  height: 3rem;
+  width: 3rem;
+  float: left;
+
+}
+article.tweet header img{
+  background-color:goldenrod;
+  width: 100%;
+}
+article.tweet header h2{
+  float: left;
+  margin:0 0.6rem 0;
+  font-weight: 700;
+}
+
+article.tweet header h4{
+  float: right;
+  margin: 0;
+  color: #aaa;
+}
+
+article.tweet footer{
+  height: 2.2rem;
+  border-top: 1px solid #888;
+  padding: 0.7rem;
+}
+
+article.tweet footer h5{
+  margin: 0;
+
+}
+
+.comment {
+  min-height: 6rem;
+  padding: 0.7rem;
+  vertical-align: middle;
+  
+}
