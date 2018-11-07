@@ -88,5 +88,21 @@ $(document).ready(function () {
     }
   }
 
-  renderTweets(data);
+  $("form").on('submit', function (event) {
+    event.preventDefault();
+  console.log( $( this ).serialize() );
+  });
+
+  function loadTweets() {
+
+    $.ajax('http://localhost:8080/tweets', {
+        method: 'GET'
+      })
+      .then(function (tweetsHtml) {
+        renderTweets(tweetsHtml);
+      });
+  }
+
+  loadTweets();
 });
+
