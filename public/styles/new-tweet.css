@@ -43,40 +43,58 @@
   color: red;
 }
 
-
 article.tweet{
-
   border: solid 1px #ddd;
   border-radius: 0.4rem;
   margin: 2rem;
- 
+  opacity: 0.8;
 }
 
-article.tweet header{
-  background-color: #eee;
-  height: 4.2rem;
-  color: #244751;
-  padding: 0.7rem;
+article.tweet:hover{
+  opacity: 1;
+  border-color: #333;
 }
 
 article.tweet * {
   font-weight: 300;
 }
 
+article.tweet header{
+  /* overflow: hidden; */
+  /* position: relative; */
+  border-top-right-radius: 0.4rem;
+  border-top-left-radius: 0.4rem;
+  background-color: #eee;
+  height: 4.2rem;
+  color: #244751;
+  padding: 0.7rem;
+}
+
 article.tweet header .img-container{
-  height: 3rem;
+  height: 100%;
+  /* position: absolute; */
   width: 3rem;
   float: left;
+  overflow: hidden;
+  border-radius: 0.4rem;
 
 }
+
 article.tweet header img{
-  background-color:goldenrod;
-  width: 100%;
+  width: 110% ;
+  /* background-position: center; */
 }
+
 article.tweet header h2{
   float: left;
   margin:0 0.6rem 0;
   font-weight: 700;
+}
+
+.comment {
+  padding: 0.7rem;
+  vertical-align: middle;
+  
 }
 
 article.tweet header h4{
@@ -86,19 +104,22 @@ article.tweet header h4{
 }
 
 article.tweet footer{
-  height: 2.2rem;
-  border-top: 1px solid #888;
+  border-top: 1px solid #ddd;
   padding: 0.7rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 article.tweet footer h5{
   margin: 0;
-
 }
 
-.comment {
-  min-height: 6rem;
-  padding: 0.7rem;
-  vertical-align: middle;
-  
+#icons i{
+  margin-left: 0.5rem;
+  color: rgb(55, 120, 84);
+}
+
+.show{
+  margin-left: 0.5rem;
+  color: rgb(55, 120, 84);
 }

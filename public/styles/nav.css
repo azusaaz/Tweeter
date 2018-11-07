@@ -20,14 +20,3 @@
   float: left;
   margin-left: 10px;
 }
-
-article.tweet header{
-  color: #e8fdff;
-  height: 2rem;
-  border-bottom: 1px solid black
-}
-
-article.tweet footer{
-  height: 1rem;
-  border-top: 1px solid black
-}
