@@ -18,7 +18,7 @@ $(document).ready(function () {
       <h4>${data.user.handle}</h4>
     </header>
     <div class="comment">
-      <h4>${data.content.text}</h4>
+      <h4>${escape(data.content.text)}</h4>  
     </div>
     <footer>
       <h5>${daysAgo} days ago</h5>
@@ -31,6 +31,12 @@ $(document).ready(function () {
     </article>`
 
     return text;
+  }
+
+  function escape(str) {
+    var div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
   }
 
   function renderTweets(tweets) {
