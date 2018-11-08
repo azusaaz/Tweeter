@@ -1,9 +1,17 @@
+#tweets-container {
+  height: 100%;
+  background-color: red;
+  margin: auto 0;
+}
+
+
 #new-tweet {
   background-color: #eee;
   border: solid 1px #ddd;
   border-radius: 0.4rem;
   margin: 2rem;
   padding: 0.7rem;
+  display: none;
 }
 
 #new-tweet h2 {
@@ -74,6 +82,7 @@ article.tweet{
 article.tweet:hover{
   opacity: 1;
   border-color: #333;
+  cursor: pointer;
 }
 
 article.tweet:hover{
