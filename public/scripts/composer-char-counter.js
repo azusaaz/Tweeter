@@ -5,8 +5,14 @@ $(document).ready(function () {
     var count = 140 - $textarea.val().length;
     var $counter = $('#counter')
 
+    if ($textarea.val().length > 0 && $textarea.val().length <= 140) {
+      $('#error').slideUp();
+    }
+
     if (count < 0) {
       $counter.addClass('error');
+      // $('#error').html("Cannot tweet more than 140 letters");
+      // $('#error').slideDown();
     } else {
       $counter.removeClass('error');
     }
