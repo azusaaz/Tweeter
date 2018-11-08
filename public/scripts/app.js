@@ -60,13 +60,17 @@ $(document).ready(function () {
   $("form").on('submit', function (event) {
     event.preventDefault();
     // console.log("serial",$( this ).serialize());
-
+    
     if ($(this).find("textarea").val().length === 0) {
-      alert("Please input text");
-    }
-    if ($(this).find("textarea").val().length > 140) {
-      alert("Cannot tweet more than 140 letter");
-    }
+      $('#error').html("Please input something");
+      $('#error').slideDown();
+ 
+    }else if ($(this).find("textarea").val().length > 140) {
+      $('#error').html("Cannot tweet more than 140 letters");
+      $('#error').slideDown();
+   
+    }else{
+  
 
     var $text = $(this).find("textarea");
 
@@ -89,6 +93,7 @@ $(document).ready(function () {
         }
 
       });
+    }
   });
 
   function loadTweets() {

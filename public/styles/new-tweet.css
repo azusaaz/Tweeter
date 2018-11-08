@@ -31,26 +31,36 @@
   background-color: white !important;   /* for chrome bug */
 }
 
-#tweetButton{
-  display: inline;
+
+.inline{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
-#error{
-  margin-left: 0.3rem;
-  color: red;
-  display: inline;
+#dummy{
+  margin: 0;
+  margin-top: 0.3rem;
   visibility: hidden;
 }
 
-.counter {
-  float: right;
+#error{
+  color: red;
+  margin: 0;
+  margin-left: 0.7rem;
+  margin-top: 0.3rem;
+  display: none;
+}
+
+
+#counter {
   font-size: 0.8rem;
   font-style: italic;
   margin-top: 0.5rem;
   margin-right: 0.5rem;
 }
 
-.counter.error {
+#counter.error {
   color: red;
 }
 
@@ -115,7 +125,7 @@ article.tweet header h2{
 .comment {
   padding: 0.7rem;
   vertical-align: middle;
-  
+  overflow-wrap: break-word;
 }
 
 article.tweet header h4{

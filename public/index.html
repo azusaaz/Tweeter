@@ -46,9 +46,14 @@
         <h2>Compose Tweet</h2>
         <form method="POST" action="/tweets/">
           <textarea name="text" placeholder="What are you humming about?"></textarea>
-          <input id="tweetButton" type="submit" value="Tweet">
-          <p id="error">error!</p>
-          <span class="counter">140</span>
+          <div class=inline>
+            <input id="tweetButton" type="submit" value="Tweet">
+            <div class=inline>
+              <p id="error">error!</p>
+              <p id="dummy">dummy</p>
+              <span id="counter">140</span>
+          </div>
+           </div>
         </form>
       </section>
       
