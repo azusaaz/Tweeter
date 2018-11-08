@@ -31,6 +31,17 @@
   background-color: white !important;   /* for chrome bug */
 }
 
+#tweetButton{
+  display: inline;
+}
+
+#error{
+  margin-left: 0.3rem;
+  color: red;
+  display: inline;
+  visibility: hidden;
+}
+
 .counter {
   float: right;
   font-size: 0.8rem;
