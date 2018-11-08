@@ -1,4 +1,4 @@
-.new-tweet {
+#new-tweet {
   background-color: #eee;
   border: solid 1px #ddd;
   border-radius: 0.4rem;
@@ -6,11 +6,11 @@
   padding: 0.7rem;
 }
 
-.new-tweet h2 {
+#new-tweet h2 {
   margin: 0;
 }
 
-.new-tweet h2::after {
+#new-tweet h2::after {
 
   content: "";
   display: block;
@@ -21,11 +21,11 @@
 
 }
 
-.new-tweet form {
+#new-tweet form {
   margin: 0 auto;
 }
 
-.new-tweet textarea {
+#new-tweet textarea {
   width: 100%;
   padding: 0.3rem;
   background-color: white !important;   /* for chrome bug */

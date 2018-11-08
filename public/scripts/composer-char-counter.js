@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-  $(".new-tweet form textarea").on('keyup', function () {
+  $("#new-tweet form textarea").on('keyup', function () {
     var $textarea = $(this);
     var count = 140 - $textarea.val().length;
     var $counter = $textarea.siblings('.counter')
@@ -17,7 +17,7 @@ $(document).ready(function () {
 // before refactor
 // $(document).ready(function () {
 
-//   $(".new-tweet form textarea").on('keydown', function () {
+//   $("#new-tweet form textarea").on('keydown', function () {
 //     var $textarea = $(this);
 //     var max = 140;
 //     var txt = $textarea.val().length + 1;

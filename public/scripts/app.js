@@ -47,6 +47,16 @@ $(document).ready(function () {
     }
   }
 
+  //slide toggle the new tweet window
+  $("#nav-button").on('click', function () {
+    if ($("#new-tweet").is(':visible')) {
+      $("#new-tweet").slideUp();
+    } else {
+      $("#new-tweet").slideDown();
+      $("#new-tweet textarea").focus();
+    }
+  });
+
   $("form").on('submit', function (event) {
     event.preventDefault();
     // console.log("serial",$( this ).serialize());
