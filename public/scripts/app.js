@@ -19,8 +19,9 @@ $(document).ready(function () {
 
   //when clicked tweet button
   $("form").on('submit', function (event) {
+
     event.preventDefault();
-    // console.log("serial",$( this ).serialize());
+    // ("serial",$( this ).serialize());
 
     if ($(this).find("textarea").val().length === 0) {
       $('#error').html("Please input something");
@@ -39,9 +40,8 @@ $(document).ready(function () {
           method: 'POST',
           data: $(this).serialize(),
         })
-
         .done(function (data, status, response) {
-          // console.log(data,status,response.status)
+     
           if (response.status === 503) {
             alert("something wrong");
           }
