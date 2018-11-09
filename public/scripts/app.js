@@ -48,6 +48,7 @@ $(document).ready(function () {
           if (response.status === 201) {
             $('#tweets-container').empty();
             $text.val("");
+            $("#counter").html(140);
             loadTweets();
           }
         });
