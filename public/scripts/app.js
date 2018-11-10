@@ -109,9 +109,12 @@ $(document).ready(function () {
         <div class="img-container">
           <img src="${data.user.avatars.small}" alt="">
         </div>
-        <h2>${data.user.name}</h2>
+        <div class= "row between names">
+          <h2>${data.user.name}</h2>
+          <h4>${data.user.handle}</h4>
+        </div>
       </div>
-      <h4>${data.user.handle}</h4>
+      
     </header>
     <div class="comment">
       <h4>${escape(data.content.text)}</h4>  

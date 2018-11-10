@@ -81,6 +81,7 @@ article.tweet footer {
   padding: 0.7rem;
   display: flex;
   justify-content: space-between;
+  flex-wrap: nowrap;
 }
 
 article.tweet footer h5 {
@@ -93,16 +94,33 @@ article.tweet footer h5 {
   opacity: 0;
 }
 
-.row{
+.row {
   display: flex;
   width: 100%;
-  align-items: space-between;
 }
 
-@media only screen and (max-width: 230px) {
-  header h4{
+.between {
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 400px) {
+  article.tweet header h4 {
     display: none;
-    /* font-size: 0.5rem; */
+  }
+}
+@media only screen and (max-width: 230px) {
+  article.tweet header h4 {
+    display: block;
+    font-size: 0.5rem;
+    padding-left: 0.6rem;
+    margin-top: 0.3rem;
   }
 
+  .names {
+    flex-direction: column;
+  }
+
+  article.tweet * {
+    font-weight: 300;
+  }
 }
