@@ -71,16 +71,17 @@
   #nav-bar {
     height: 50px;
     align-items: center;
+    padding: 0 1em;
   }
 
   #nav-bar .logo {
     width: 50px;
     height: 50px;
-    float: left;
   }
 
   #nav-bar .header {
     font-size: 1.5rem;
+    line-height: 50px;
   }
 
   #nav-bar i {
@@ -90,5 +91,11 @@
   .nav-button {
     font-size: 1rem;
     border-radius: 0.3rem;
+  }
+}
+
+@media only screen and (max-width: 230px) {
+  #nav-bar .header {
+    display: none;
   }
 }

@@ -1,32 +1,31 @@
-article.tweet{
+article.tweet {
   border: solid 1px #ddd;
   border-radius: 0.4rem;
   margin: 2rem;
   opacity: 0.8;
 }
 
-@media only screen and (max-width: 450px){
-  article.tweet{
+@media only screen and (max-width: 450px) {
+  article.tweet {
     margin: 1rem;
   }
 }
-
-article.tweet:hover{
+article.tweet:hover {
   opacity: 1;
   border-color: #333;
   cursor: pointer;
 }
 
-article.tweet:hover{
+article.tweet:hover {
   opacity: 1;
   border-color: #333;
 }
 
-article.tweet:hover #icons i{
+article.tweet:hover #icons i {
   opacity: 0.8;
 }
 
-article.tweet:hover #icons i:hover{
+article.tweet:hover #icons i:hover {
   opacity: 1;
 }
 
@@ -34,32 +33,33 @@ article.tweet * {
   font-weight: 300;
 }
 
-article.tweet header{
+article.tweet header {
   border-top-right-radius: 0.4rem;
   border-top-left-radius: 0.4rem;
   background-color: #eee;
   color: #244751;
   padding: 0.5rem;
   height: 4.2rem;
+  display: flex;
+  justify-content: space-around;
 }
 
-article.tweet header .img-container{
-  height: 3.2rem;
-  width: 3.2rem;
-  float: left;
+article.tweet header .img-container {
+  min-height: 3.2rem;
+  min-width: 3.2rem;
+  /* float: left; */
   overflow: hidden;
   border-radius: 0.4rem;
-
 }
 
-article.tweet header img{
-  width: 100% ;
+article.tweet header img {
+  width: 100%;
   background-size: cover;
 }
 
-article.tweet header h2{
+article.tweet header h2 {
   float: left;
-  margin:0 0.6rem 0;
+  margin: 0 0.6rem 0;
   font-weight: 700;
 }
 
@@ -69,30 +69,40 @@ article.tweet header h2{
   overflow-wrap: break-word;
 }
 
-article.tweet header h4{
+article.tweet header h4 {
   float: right;
   margin: 0;
   margin-top: 0.5rem;
   color: #888;
 }
 
-article.tweet footer{
+article.tweet footer {
   border-top: 1px solid #ddd;
   padding: 0.7rem;
   display: flex;
   justify-content: space-between;
 }
 
-article.tweet footer h5{
+article.tweet footer h5 {
   margin: 0;
 }
 
-#icons i{
+#icons i {
   margin-left: 0.5rem;
   color: #07b091;
   opacity: 0;
 }
 
+.row{
+  display: flex;
+  width: 100%;
+  align-items: space-between;
+}
 
+@media only screen and (max-width: 230px) {
+  header h4{
+    display: none;
+    /* font-size: 0.5rem; */
+  }
 
-
+}

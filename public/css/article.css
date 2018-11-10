@@ -40,12 +40,14 @@ article.tweet header {
   color: #244751;
   padding: 0.5rem;
   height: 4.2rem;
+  display: flex;
+  justify-content: space-around;
 }
 
 article.tweet header .img-container {
-  height: 3.2rem;
-  width: 3.2rem;
-  float: left;
+  min-height: 3.2rem;
+  min-width: 3.2rem;
+  /* float: left; */
   overflow: hidden;
   border-radius: 0.4rem;
 }
@@ -89,4 +91,18 @@ article.tweet footer h5 {
   margin-left: 0.5rem;
   color: #07b091;
   opacity: 0;
+}
+
+.row{
+  display: flex;
+  width: 100%;
+  align-items: space-between;
+}
+
+@media only screen and (max-width: 230px) {
+  header h4{
+    display: none;
+    /* font-size: 0.5rem; */
+  }
+
 }

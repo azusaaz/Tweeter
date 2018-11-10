@@ -6,7 +6,7 @@
 $(document).ready(function () {
 
   //slide toggle the new tweet window
-  $("#nav-button").on('click', function () {
+  $(".nav-button").on('click', function () {
     if ($("#new-tweet").is(':visible')) {
       $("#new-tweet").slideUp();
 
@@ -41,7 +41,7 @@ $(document).ready(function () {
           data: $(this).serialize(),
         })
         .done(function (data, status, response) {
-     
+
           if (response.status === 503) {
             alert("something wrong");
           }
@@ -61,10 +61,12 @@ $(document).ready(function () {
     var text =
       `<article class="tweet">
     <header>
-      <div class="img-container">
-        <img src="${data.user.avatars.small}" alt="">
+      <div class= "row">
+        <div class="img-container">
+          <img src="${data.user.avatars.small}" alt="">
+        </div>
+        <h2>${data.user.name}</h2>
       </div>
-      <h2>${data.user.name}</h2>
       <h4>${data.user.handle}</h4>
     </header>
     <div class="comment">
@@ -73,7 +75,7 @@ $(document).ready(function () {
     <footer>
       <h5>${daysAgo} days ago</h5>
       <div id="icons">
-        <i class="icon-heart"></i>         
+        <i class="icon-heart" data-like-count = 0 ></i>         
         <i class="icon-retweet"></i>
         <i class="icon-flag"></i>
       </div>
@@ -106,6 +108,8 @@ $(document).ready(function () {
         renderTweets(tweetsHtml);
       });
   }
+
+  console.log($("#icons .icon-heart"));
 
   loadTweets();
 });
