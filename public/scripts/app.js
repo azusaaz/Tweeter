@@ -122,7 +122,7 @@ $(document).ready(function () {
     <footer>
       <h5>${howLongAgo(data.created_at)}</h5>
       <div id="icons">
-        <i class="icon-heart" data-like-count = 0 ></i>         
+        <i class="icon-heart"  data-likeCount = "0" ></i>         
         <i class="icon-retweet"></i>
         <i class="icon-flag"></i>
       </div>
