@@ -21,7 +21,7 @@ $(document).ready(function () {
   $("form").on('submit', function (event) {
 
     event.preventDefault();
-    // ("serial",$( this ).serialize());
+    // console.log("serial",$( this ).serialize());
 
     if ($(this).find("textarea").val().length === 0) {
       $('#error').html("Please input something");

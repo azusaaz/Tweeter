@@ -5,6 +5,12 @@ article.tweet{
   opacity: 0.8;
 }
 
+@media only screen and (max-width: 450px){
+  article.tweet{
+    margin: 1rem;
+  }
+}
+
 article.tweet:hover{
   opacity: 1;
   border-color: #333;
@@ -17,11 +23,11 @@ article.tweet:hover{
 }
 
 article.tweet:hover #icons i{
-  opacity: 1;
+  opacity: 0.8;
 }
 
 article.tweet:hover #icons i:hover{
-  opacity: 0.8;
+  opacity: 1;
 }
 
 article.tweet * {
@@ -32,14 +38,14 @@ article.tweet header{
   border-top-right-radius: 0.4rem;
   border-top-left-radius: 0.4rem;
   background-color: #eee;
-  height: 4.2rem;
   color: #244751;
-  padding: 0.7rem;
+  padding: 0.5rem;
+  height: 4.2rem;
 }
 
 article.tweet header .img-container{
-  height: 100%;
-  width: 3rem;
+  height: 3.2rem;
+  width: 3.2rem;
   float: left;
   overflow: hidden;
   border-radius: 0.4rem;
@@ -66,7 +72,8 @@ article.tweet header h2{
 article.tweet header h4{
   float: right;
   margin: 0;
-  color: #aaa;
+  margin-top: 0.5rem;
+  color: #888;
 }
 
 article.tweet footer{
@@ -82,6 +89,10 @@ article.tweet footer h5{
 
 #icons i{
   margin-left: 0.5rem;
-  color: rgb(55, 120, 84);
+  color: #07b091;
   opacity: 0;
 }
+
+
+
+
