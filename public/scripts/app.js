@@ -5,6 +5,8 @@
  */
 $(document).ready(function () {
 
+  //////// Event listeners ////////
+
   //slide toggle the new tweet window
   $(".nav-button").on('click', function () {
     if ($("#new-tweet").is(':visible')) {
@@ -55,8 +57,50 @@ $(document).ready(function () {
     }
   });
 
+  //////// helper functions ////////
+
+  function escape(str) {
+    var div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+
+  function howLongAgo(pastTimePoint) {
+
+    var secGap = (Date.now() - pastTimePoint) / 1000;
+    var ago;
+    if (secGap < 59) {
+      ago = Math.floor(secGap);
+      (ago === 0) ? ago = 'A while ago':
+        (ago === 1) ? ago += ' second ago' : ago += ' seconds ago';
+
+    } else if (secGap < 3599) {
+      ago = Math.floor(secGap / 60);
+      (ago === 1) ? ago += ' minute ago': ago += ' minutes ago';
+
+    } else if (secGap < 86399) {
+      ago = Math.floor(secGap / 3600);
+      (ago === 1) ? ago += ' hour ago': ago += ' hours ago';
+
+    } else if (secGap < 2591999) {
+      ago = Math.floor(secGap / 86400);
+      (ago === 1) ? ago += ' day ago': ago += ' days ago';
+
+    } else if (secGap < 31535999) {
+      ago = Math.floor(secGap / 2592000);
+      (ago === 1) ? ago += ' month ago': ago += ' months ago';
+
+    } else {
+      ago = Math.floor(secGap / 31536000);
+      (ago === 1) ? ago += ' year ago': ago += ' years ago';
+    }
+
+    return ago;
+  }
+
+  //////// main functions ////////
+
   function createTweetElement(data) {
-    var daysAgo = Math.floor((Date.now() - data.created_at) / 1000 / 86400);
 
     var text =
       `<article class="tweet">
@@ -73,7 +117,7 @@ $(document).ready(function () {
       <h4>${escape(data.content.text)}</h4>  
     </div>
     <footer>
-      <h5>${daysAgo} days ago</h5>
+      <h5>${howLongAgo(data.created_at)}</h5>
       <div id="icons">
         <i class="icon-heart" data-like-count = 0 ></i>         
         <i class="icon-retweet"></i>
@@ -83,12 +127,6 @@ $(document).ready(function () {
     </article>`
 
     return text;
-  }
-
-  function escape(str) {
-    var div = document.createElement('div');
-    div.appendChild(document.createTextNode(str));
-    return div.innerHTML;
   }
 
   function renderTweets(tweets) {
@@ -108,8 +146,6 @@ $(document).ready(function () {
         renderTweets(tweetsHtml);
       });
   }
-
-  console.log($("#icons .icon-heart"));
 
   loadTweets();
 });
