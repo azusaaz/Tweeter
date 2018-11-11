@@ -179,7 +179,7 @@ $(document).ready(function () {
           $("#new-tweet textarea").focus();
 
           // get handle name & comment
-          $("#new-tweet textarea").val(`${$(this).parent().parent().parent().parent().find(".handle").text()} ${$(this).parent().parent().parent().parent().find(".say").text()} `);
+          $("#new-tweet textarea").val(`${$(this).parent().parent().parent().parent().parent().find(".handle").text()} ${$(this).parent().parent().parent().parent().parent().find(".say").text()} /// `);
 
           $("#new-tweet textarea").trigger("keyup");
           $(this).on("mouseleave", function () {
