@@ -1,0 +1,137 @@
+article.tweet {
+  border: solid 1px #ddd;
+  border-radius: 0.4rem;
+  margin: 2rem;
+  opacity: 0.8;
+
+  * {
+    font-weight: 300;
+  }
+
+
+  //////// upper part ////////
+  header {
+    border-top-right-radius: 0.4rem;
+    border-top-left-radius: 0.4rem;
+    background-color: #eee;
+    color: #244751;
+    padding: 0.5rem;
+    height: 4.2rem;
+    display: flex;
+    justify-content: space-around;
+
+    .img-container {
+      min-height: 3.2rem;
+      min-width: 3.2rem;
+      overflow: hidden;
+      border-radius: 0.4rem;
+    }
+
+    img {
+      width: 100%;
+      background-size: cover;
+    }
+
+    h2 {
+      float: left;
+      margin: 0 0.6rem 0;
+      font-weight: 700;
+    }
+
+    h4 {
+      float: right;
+      margin: 0;
+      margin-top: 0.5rem;
+      color: #888;
+    }
+  }
+
+  //////// middle part ////////
+  .comment {
+    padding: 0.7rem;
+    vertical-align: middle;
+    overflow-wrap: break-word;
+  }
+
+  //////// bottom part ////////
+  footer {
+    border-top: 1px solid #ddd;
+    padding: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+    h5 {
+      margin: 0;
+    }
+
+    #icons i {
+      margin-left: 0.5rem;
+      opacity: 0;
+    }
+  }
+
+}
+
+article.tweet:hover {
+  opacity: 1;
+  border-color: #333;
+
+  #icons i {
+    opacity: 0.8;
+  }
+
+  #icons i:hover {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  article.tweet {
+    margin: 1rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  article.tweet header h4 {
+    // display: none;
+  }
+}
+
+@media only screen and (max-width: 230px) {
+
+  article.tweet {
+
+    //////// upper part ////////
+    header {
+      
+      h4 {
+        display: block;
+        font-size: 0.5rem;
+        padding-left: 0.6rem;
+        margin-top: 0.3rem;
+      }
+
+      #names {
+        flex-direction: column;
+      }
+    }
+
+    //////// bottom part ////////
+    footer {
+
+      i .def {
+        color: #07b091;
+      }
+
+      i .flag-on {
+        color: rgb(186, 211, 25);
+        background-color: black;
+      }
+
+      i .heart-on {
+        color: palevioletred;
+      }
+    }
+  }
+}

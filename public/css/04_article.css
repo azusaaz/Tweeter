@@ -4,35 +4,9 @@ article.tweet {
   margin: 2rem;
   opacity: 0.8;
 }
-
-@media only screen and (max-width: 450px) {
-  article.tweet {
-    margin: 1rem;
-  }
-}
-article.tweet:hover {
-  opacity: 1;
-  border-color: #333;
-  cursor: pointer;
-}
-
-article.tweet:hover {
-  opacity: 1;
-  border-color: #333;
-}
-
-article.tweet:hover #icons i {
-  opacity: 0.8;
-}
-
-article.tweet:hover #icons i:hover {
-  opacity: 1;
-}
-
 article.tweet * {
   font-weight: 300;
 }
-
 article.tweet header {
   border-top-right-radius: 0.4rem;
   border-top-left-radius: 0.4rem;
@@ -43,39 +17,32 @@ article.tweet header {
   display: flex;
   justify-content: space-around;
 }
-
 article.tweet header .img-container {
   min-height: 3.2rem;
   min-width: 3.2rem;
-  /* float: left; */
   overflow: hidden;
   border-radius: 0.4rem;
 }
-
 article.tweet header img {
   width: 100%;
   background-size: cover;
 }
-
 article.tweet header h2 {
   float: left;
   margin: 0 0.6rem 0;
   font-weight: 700;
 }
-
-.comment {
-  padding: 0.7rem;
-  vertical-align: middle;
-  overflow-wrap: break-word;
-}
-
 article.tweet header h4 {
   float: right;
   margin: 0;
   margin-top: 0.5rem;
   color: #888;
 }
-
+article.tweet .comment {
+  padding: 0.7rem;
+  vertical-align: middle;
+  overflow-wrap: break-word;
+}
 article.tweet footer {
   border-top: 1px solid #ddd;
   padding: 0.7rem;
@@ -83,47 +50,48 @@ article.tweet footer {
   justify-content: space-between;
   flex-wrap: nowrap;
 }
-
 article.tweet footer h5 {
   margin: 0;
 }
-
-#icons i {
+article.tweet footer #icons i {
   margin-left: 0.5rem;
-  color: #07b091;
   opacity: 0;
 }
 
-.row {
-  display: flex;
-  width: 100%;
+article.tweet:hover {
+  opacity: 1;
+  border-color: #333;
+}
+article.tweet:hover #icons i {
+  opacity: 0.8;
+}
+article.tweet:hover #icons i:hover {
+  opacity: 1;
 }
 
-.between {
-  justify-content: space-between;
-}
-
-@media only screen and (max-width: 400px) {
-  article.tweet header h4 {
-    display: none;
+@media only screen and (max-width: 450px) {
+  article.tweet {
+    margin: 1rem;
   }
 }
-
 @media only screen and (max-width: 230px) {
   article.tweet header h4 {
     display: block;
     font-size: 0.5rem;
-    padding-left:0.6rem;
+    padding-left: 0.6rem;
     margin-top: 0.3rem;
   }
-  .names{
+  article.tweet header #names {
     flex-direction: column;
   }
-
-element.style {
-}
-article.tweet * {
-    font-weight: 300;
-}
-
+  article.tweet footer i .def {
+    color: #07b091;
+  }
+  article.tweet footer i .flag-on {
+    color: #bad319;
+    background-color: black;
+  }
+  article.tweet footer i .heart-on {
+    color: palevioletred;
+  }
 }

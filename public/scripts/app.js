@@ -57,6 +57,8 @@ $(document).ready(function () {
     }
   });
 
+
+
   //////// helper functions ////////
 
   function escape(str) {
@@ -103,31 +105,38 @@ $(document).ready(function () {
   function createTweetElement(data) {
 
     var text =
-      `<article class="tweet">
-    <header>
-      <div class= "row">
-        <div class="img-container">
-          <img src="${data.user.avatars.small}" alt="">
-        </div>
-        <div class= "row between names">
-          <h2>${data.user.name}</h2>
-          <h4>${data.user.handle}</h4>
-        </div>
+   `<article class="tweet">
+
+      <header class="between">
+        <div class= "between">
+
+          <div class="img-container">
+            <img src="${data.user.avatars.small}" alt="">
+          </div>
+
+          <div id="names" class= "between">
+            <h2>${data.user.name}</h2>
+            <h4>${data.user.handle}</h4>
+          </div>
+
+        </div>  
+      </header>
+
+      <div class="comment">
+        <h4>${escape(data.content.text)}</h4>  
       </div>
-      
-    </header>
-    <div class="comment">
-      <h4>${escape(data.content.text)}</h4>  
-    </div>
-    <footer>
-      <h5>${howLongAgo(data.created_at)}</h5>
-      <div id="icons">
-        <i class="icon-heart"  data-likeCount = "0" ></i>         
-        <i class="icon-retweet"></i>
-        <i class="icon-flag"></i>
-      </div>
-    </footer>
-    </article>`
+
+      <footer>
+        <h5>${howLongAgo(data.created_at)}</h5>
+
+        <div id="icons">
+          <i class="icon-heart def" data-like = '0' > 0 </i>         
+          <i class="icon-retweet def"></i>
+          <i class="icon-flag def"></i>
+        </div>
+      </footer>
+
+    </article>`;
 
     return text;
   }
@@ -147,8 +156,23 @@ $(document).ready(function () {
       })
       .done(function (tweetsHtml) {
         renderTweets(tweetsHtml);
+
+        //listener for "like" 
+        $("#icons .icon-heart").on('click', function () {
+          var tmp = $(this).data('like');
+          $(this).data('like', tmp += 1);
+          $(this).html(` ${$( this ).data('like')} `);
+        });
+
+        //listener for "flag" 
+        $(".icon-flag").on('click', function () {
+          $(".icon-flag").toggleClass("flag-on");
+
+          console.log("aaa");
+        });
       });
   }
 
   loadTweets();
+
 });

@@ -24,10 +24,7 @@ body {
   font-family: "Roboto Condensed", sans-serif;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
-.container {
+main {
   width: 450px;
   height: 100%;
   margin: 80px auto 0;
@@ -35,8 +32,19 @@ body {
   background-color: #fff;
 }
 
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.between {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
 @media only screen and (max-width: 450px) {
-  .container {
+  main {
     width: 100%;
     margin: 40px auto 0;
   }
@@ -47,3 +55,4 @@ body {
     font-size: 0.8rem;
   }
 }
+
