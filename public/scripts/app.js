@@ -159,6 +159,7 @@ $(document).ready(function () {
 
         //listener for "like" 
         $("#icons .icon-heart").on('click', function () {
+          $(this).addClass("heart-on");
           var tmp = $(this).data('like');
           $(this).data('like', tmp += 1);
           $(this).html(` ${$( this ).data('like')} `);
@@ -166,9 +167,7 @@ $(document).ready(function () {
 
         //listener for "flag" 
         $(".icon-flag").on('click', function () {
-          $(".icon-flag").toggleClass("flag-on");
-
-          console.log("aaa");
+          $(this).toggleClass("flag-on");
         });
       });
   }

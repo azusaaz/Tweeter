@@ -63,10 +63,25 @@ article.tweet:hover {
   border-color: #333;
 }
 article.tweet:hover #icons i {
-  opacity: 0.8;
-}
-article.tweet:hover #icons i:hover {
   opacity: 1;
+}
+article.tweet:hover .def {
+  color: #07b091;
+}
+article.tweet:hover .icon-heart:hover {
+  color: #f76da2;
+}
+article.tweet:hover .icon-retweet:hover {
+  color: #0e66ff;
+}
+article.tweet:hover .icon-flag:hover {
+  color: #f04e8c;
+}
+article.tweet:hover .heart-on {
+  color: #ffa2c6;
+}
+article.tweet:hover .flag-on {
+  color: #b00748;
 }
 
 @media only screen and (max-width: 450px) {
@@ -83,15 +98,5 @@ article.tweet:hover #icons i:hover {
   }
   article.tweet header #names {
     flex-direction: column;
-  }
-  article.tweet footer i .def {
-    color: #07b091;
-  }
-  article.tweet footer i .flag-on {
-    color: #bad319;
-    background-color: black;
-  }
-  article.tweet footer i .heart-on {
-    color: palevioletred;
   }
 }
