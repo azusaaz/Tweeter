@@ -30,6 +30,16 @@
     background-color: white !important;
     /* for chrome bug */
   }
+
+  #tweetButton {
+    margin-top: 0.2rem;
+    padding:0.2rem;
+    background-image: linear-gradient(to bottom, #e4e4e4, #f7f7f7);
+  }
+
+  #tweetButton:hover{
+    cursor: pointer;
+  }
   
   #dummy {
     margin: 0;
@@ -48,7 +58,7 @@
   #counter {
     font-size: 0.8rem;
     font-style: italic;
-    margin-top: 0.5rem;
+    margin-top: 0.4rem;
     margin-right: 0.5rem;
   }
 

@@ -105,7 +105,7 @@ $(document).ready(function () {
   function createTweetElement(data) {
 
     var text =
-    `<article class="tweet">
+      `<article class="tweet">
 
       <header class="between">
         <div class= "between">
@@ -130,10 +130,17 @@ $(document).ready(function () {
         <h5>${howLongAgo(data.created_at)}</h5>
 
         <div id="icons" class="row">
-        <div><i class="icon-flag def"></i></div>      
+        
+         <div class="row">
+          <div><i class="icon-flag def"></i></div>      
           <div><i class="icon-retweet def"></i></div>
-          <div><i class="icon-heart def" data-like = '0' > 0 </i></div> 
+         </div>
+
+         <div>
+          <div><i class="icon-heart def" data-like = '0' ><span> 0 </span></i></div> 
+          </div>
         </div>
+
       </footer>
 
     </article>`;

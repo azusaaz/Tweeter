@@ -49,6 +49,7 @@ article.tweet {
   //////// middle part ////////
   .comment {
     padding: 0.7rem;
+    padding-top: 1rem;
     vertical-align: middle;
     overflow-wrap: break-word;
   }
@@ -81,7 +82,7 @@ article.tweet:hover {
   opacity: 1;
   border-color: #333;
   
-  #icons div:hover {
+  #icons div div:hover {
     transform: scale(1.2);
   }
 
@@ -95,8 +96,12 @@ article.tweet:hover {
     transform: scale(1.7);
   }
 
-  .icon-heart{
+  .icon-heart {
     font-size: 0.95rem;
+
+    span {
+      font-family: "Roboto Condensed", sans-serif;
+    }
   }
 
   // .icon-heart:hover{
@@ -131,9 +136,9 @@ article.tweet:hover {
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 300px) {
   article.tweet header h4 {
-    // display: none;
+    display: none;
   }
 }
 
@@ -158,8 +163,9 @@ article.tweet:hover {
 
     //////// bottom part ////////
     footer {
-
-
+      #icons {
+        flex-direction: column;
+      }
     }
   }
 }
