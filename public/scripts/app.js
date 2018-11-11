@@ -105,7 +105,7 @@ $(document).ready(function () {
   function createTweetElement(data) {
 
     var text =
-     `<article class="tweet">
+    `<article class="tweet">
 
       <header class="between">
         <div class= "between">
@@ -116,23 +116,23 @@ $(document).ready(function () {
 
           <div id="names" class= "between">
             <h2>${data.user.name}</h2>
-            <h4>${data.user.handle}</h4>
+            <h4 class="handle">${data.user.handle}</h4>
           </div>
 
         </div>  
       </header>
 
       <div class="comment">
-        <h4>${escape(data.content.text)}</h4>  
+        <h4 class="say">${escape(data.content.text)}</h4>  
       </div>
 
-      <footer>
+      <footer class="between">
         <h5>${howLongAgo(data.created_at)}</h5>
 
-        <div id="icons">
-          <i class="icon-heart def" data-like = '0' > 0 </i>         
-          <i class="icon-retweet def"></i>
-          <i class="icon-flag def"></i>
+        <div id="icons" class="row">
+        <div><i class="icon-flag def"></i></div>      
+          <div><i class="icon-retweet def"></i></div>
+          <div><i class="icon-heart def" data-like = '0' > 0 </i></div> 
         </div>
       </footer>
 
@@ -157,17 +157,35 @@ $(document).ready(function () {
       .done(function (tweetsHtml) {
         renderTweets(tweetsHtml);
 
-        //listener for "like" 
+        //// listener for "flag" ////
+        $(".icon-flag").on('click', function () {
+          $(this).toggleClass("flag-on");
+        });
+
+        //// listener for "retweet" ////
+        $(".icon-retweet").on('click', function () {
+          $(this).addClass("retweet-on");
+          $("html").animate({
+            scrollTop: $("#new-tweet")
+          }, "slow");
+          $("#new-tweet").slideDown();
+          $("#new-tweet textarea").focus();
+
+          // get handle name & comment
+          $("#new-tweet textarea").val(`${$(this).parent().parent().parent().parent().find(".handle").text()} ${$(this).parent().parent().parent().parent().find(".say").text()} `);
+
+          $("#new-tweet textarea").trigger("keyup");
+          $(this).on("mouseleave", function () {
+            $(this).removeClass("retweet-on")
+          });
+        });
+
+        //// listener for "like" ////
         $("#icons .icon-heart").on('click', function () {
           $(this).addClass("heart-on");
           var tmp = $(this).data('like');
           $(this).data('like', tmp += 1);
           $(this).html(` ${$( this ).data('like')} `);
-        });
-
-        //listener for "flag" 
-        $(".icon-flag").on('click', function () {
-          $(this).toggleClass("flag-on");
         });
       });
   }

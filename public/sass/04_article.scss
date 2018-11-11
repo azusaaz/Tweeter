@@ -56,13 +56,18 @@ article.tweet {
   //////// bottom part ////////
   footer {
     border-top: 1px solid #ddd;
-    padding: 0.7rem;
+    padding: 0.5rem;
+    padding-top: 0.7rem;
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
 
     h5 {
       margin: 0;
+    }
+
+    #icons {
+      align-content: flex-end;
     }
 
     #icons i {
@@ -75,34 +80,49 @@ article.tweet {
 article.tweet:hover {
   opacity: 1;
   border-color: #333;
+  
+  #icons div:hover {
+    transform: scale(1.2);
+  }
 
   #icons i {
     opacity: 1;
+    margin-left:0.7rem;
   }
 
   .def {
     color: #07b091;
+    transform: scale(1.7);
   }
 
-  .icon-heart:hover{
-    color: #f76da2;
+  .icon-heart{
+    font-size: 0.95rem;
   }
 
-  .icon-retweet:hover{
-    color: #0e66ff
+  // .icon-heart:hover{
+  //   color: #f76da2;
+  // }
+
+  // .icon-retweet:hover{
+  //   color: #0e66ff
+  // }
+
+  // .icon-flag:hover{
+  //   color: #f04e8c;
+  // }
+
+  .flag-on {
+    color: #b00748;
   }
 
-  .icon-flag:hover{
-    color: #f04e8c;
+  .retweet-on {
+    color: #1775e8;
   }
 
   .heart-on {
     color: #ffa2c6;
   }
 
-  .flag-on {
-    color: #b00748;
-  }
 }
 
 @media only screen and (max-width: 450px) {
