@@ -105,7 +105,7 @@ $(document).ready(function () {
   function createTweetElement(data) {
 
     var text =
-   `<article class="tweet">
+     `<article class="tweet">
 
       <header class="between">
         <div class= "between">
