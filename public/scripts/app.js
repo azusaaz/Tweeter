@@ -38,7 +38,8 @@ $(document).ready(function () {
       var $text = $(this).find("textarea");
 
       $.ajax({
-          url: 'http://localhost:8080/tweets',
+          // url: 'http://localhost:8080/tweets',
+          url: 'https://gentle-chamber-94500.herokuapp.com//tweets',
           method: 'POST',
           data: $(this).serialize(),
         })
