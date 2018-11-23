@@ -1,7 +1,6 @@
 "use strict";
 
 require('dotenv').config();
-
 // Basic express setup:
 
 const PORT          = 8080;
@@ -35,6 +34,6 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
 
 });
 
-app.listen(PORT||process.env.PORT, () => {
+app.listen(PORT, () => {
   console.log("Tweeter app listening on port " + PORT);
 });
