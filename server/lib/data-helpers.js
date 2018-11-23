@@ -17,6 +17,18 @@ module.exports = function makeDataHelpers(db) {
       // Get all tweets in `db`, sorted by newest first
       getTweets: function (callback) {
         db.collection("tweets").find().toArray(callback);
+      },
+
+          // Saves a tweet to `db`
+    updateTweet: function (attribute, whoes, callback) {
+      db.collection("tweets").update(
+        {_id: 0},
+        { $set:
+          {
+            attribute: !attribute        
+          }
+        }
+        )
       }
     };
 }

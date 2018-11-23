@@ -102,6 +102,19 @@ $(document).ready(function () {
 
   //////// main functions ////////
 
+  function toggleIcon(data, icon){
+
+    let tmp = data.content[icon][data.user.handle];
+
+    if(tmp){
+       // toggle like
+       tmp = !tmp
+    }else{
+       // create new record;
+       tmp = true;
+    }
+  }
+
   function createTweetElement(data) {
 
     var text =
