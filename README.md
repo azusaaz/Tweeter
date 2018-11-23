@@ -4,7 +4,7 @@ Tweeter is a simple, single-page Twitter clone.
 
 This project was forked and developed from the original starter code repository. The UI design for a a regular window is following a given design spec.
 
-Account feature is in progress.　User name and handle name for each tweet are generated automatically
+Account feature is in progress.　User name and handle name for each tweet are generated automatically.
 
 HTML, CSS, JS, jQuery and AJAX are used for front-end, 
 Node, Express and MongoDB are used for back-end.
