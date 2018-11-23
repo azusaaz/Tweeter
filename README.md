@@ -26,6 +26,7 @@ Node, Express and MongoDB are used for back-end.
 - Express
 - Node 5.10.x or above
 - body-parser
+- dotenv
 - chance
 - md5
 - mongodb
