@@ -39,7 +39,7 @@ $(document).ready(function () {
 
       $.ajax({
           // url: 'http://localhost:8080/tweets',
-          url: 'https://gentle-chamber-94500.herokuapp.com//tweets',
+          url: 'https://gentle-chamber-94500.herokuapp.com/tweets',
           method: 'POST',
           data: $(this).serialize(),
         })
@@ -172,7 +172,8 @@ $(document).ready(function () {
 
   function loadTweets() {
 
-    $.ajax('http://localhost:8080/tweets', {
+    // $.ajax('http://localhost:8080/tweets', {
+    $.ajax('https://gentle-chamber-94500.herokuapp.com/tweets', {
         method: 'GET'
       })
       .done(function (tweetsHtml) {
